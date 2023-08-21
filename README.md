@@ -6,7 +6,7 @@ I already had an exisiting VPC network setup and wanted to plug it into this ter
 # Example use
 ``` go
 module "logging-db" {
-  source              = "./logging-db"
+  source              = "github.com/sanj2sanj/terraform-aws-rds-instance"
   security_group_cidr = aws_vpc.shuttle.cidr_block
   vpc_id              = aws_vpc.shuttle.id
   aws_db_subnet_group = aws_db_subnet_group.managed.name
